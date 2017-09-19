@@ -45,8 +45,8 @@ with open(fname, "r", encoding="utf-8") as f:
 mc = MarkovChar(6)
 mc.learn(x)
 print(textwrap.fill(mc.generate(500), width=72))
-
-
+```
+```
 100% |#################################################################|
 I crouched his heels, and you thinker and chronicle of San France. All
 the whole propriate description, with a pale, haggard. Sherlock Holmes
@@ -70,8 +70,8 @@ with open(fname, "r", encoding="utf-8") as f:
 mw = MarkovWord(2)
 mw.learn(x)
 print(textwrap.fill(mw.generate(100), width=72))
-
-
+```
+```
 100% |##################################################################|
 California with her hands upon it five little dried orange pips in the
 name of the man who had done their work. When I went and saw him last he

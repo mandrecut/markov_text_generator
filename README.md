@@ -16,15 +16,16 @@ from markov import MarkovWord
 mw = MarkovWord(1)
 mw.learn("Some long string, for example an article, or a book.")
 print(mw.generate(7))
-
+```
+```
 Some long article, or a book.
 ```
 
 The `order` parameter corresponds to the Markov chain order `(>=1)`. 
 
-A larger value of `order` reproduces more from the original text. 
+A large `order` reproduces more from the original text. 
 
-A smaller value of `order` generates more random text. 
+A small `order` generates more random text. 
 
 Methods:
 

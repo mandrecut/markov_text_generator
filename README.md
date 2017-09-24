@@ -8,6 +8,16 @@ Two Markov chain Python classes:
 
 - `MarkovWord(order)`: word level 
 
+The `order` parameter corresponds to the Markov chain order `(>=1)`. 
+
+
+Methods:
+
+- `learn(txt)`, creates a model given a string `txt`.
+
+- `generate(length)`, generates a random text (starting with uppercase) with a minimum `lenght`, until the last sentence ends in `".?!"`
+
+
 ## Basic usage
 
 ```python
@@ -20,19 +30,6 @@ print(mw.generate(7))
 ```
 Some long article, or a book.
 ```
-
-The `order` parameter corresponds to the Markov chain order `(>=1)`. 
-
-A large `order` reproduces more from the original text. 
-
-A small `order` generates more random text. 
-
-Methods:
-
-- `learn(txt)`, creates a model given a string `txt`.
-
-- `generate(length)`, generates random text (starting with uppercase) with a minimum `lenght`, until the last sentence ends in `".?!"`
-
 
 ## Char level Markov chain
 

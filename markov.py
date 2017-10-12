@@ -18,6 +18,7 @@ class MarkovChar(object):
         Input: some text.
         Returns the dictionary and the state transition probabilities.
         """
+        txt = txt+txt[0:self.order]
         bar = progressbar.ProgressBar()
         for n in bar(range(len(txt)-self.order)):
             self.dct[txt[n:n+self.order]][txt[n+self.order]] += 1
@@ -71,6 +72,7 @@ class MarkovWord(object):
         Returns the dictionary and the state transition probabilities.
         """
         x = re.findall(r"[\w']+|[.,!?;]", txt)
+        x.extend(x[0:self.order])
         bar = progressbar.ProgressBar()
         for n in bar(range(len(x)-self.order)):
             k = []
